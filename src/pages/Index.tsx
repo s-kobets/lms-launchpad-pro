@@ -1,7 +1,8 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import Features from "@/components/landing/Features";
-import Courses from "@/components/landing/Courses";
+import Segments from "@/components/landing/Segments";
+import Benefits from "@/components/landing/Benefits";
+import HowItWorks from "@/components/landing/HowItWorks";
 import Testimonials from "@/components/landing/Testimonials";
 import CTA from "@/components/landing/CTA";
 import Footer from "@/components/landing/Footer";
@@ -11,8 +12,9 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
-      <Features />
-      <Courses />
+      <Segments />
+      <Benefits />
+      <HowItWorks />
       <Testimonials />
       <CTA />
       <Footer />
