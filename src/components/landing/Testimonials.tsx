@@ -1,29 +1,26 @@
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const testimonials = [
   {
     id: 1,
-    content: "LearnHub transformed how our team approaches professional development. The courses are incredibly well-structured and the analytics help us track ROI on training.",
-    author: "Jennifer Martinez",
-    role: "HR Director",
-    company: "TechCorp Inc.",
-    rating: 5
+    content: "За месяц перевели 300 студентов с Telegram в Level 80 и перестали терять доступы. Теперь всё под контролем.",
+    author: "LinguaGo",
+    role: "Школа английского языка",
+    highlight: "300 студентов за месяц"
   },
   {
     id: 2,
-    content: "I completed the Data Science bootcamp and landed my dream job within 2 months. The instructors are world-class and the community support is unmatched.",
-    author: "Alex Thompson",
-    role: "Data Scientist",
-    company: "DataFlow",
-    rating: 5
+    content: "Запустила свой курс за выходные и заработала первую сотню продаж. Платформа реально простая!",
+    author: "Мария М.",
+    role: "Коуч",
+    highlight: "100 продаж за выходные"
   },
   {
     id: 3,
-    content: "As a manager, I appreciate how LearnHub makes it easy to assign courses and track my team's progress. The enterprise features are exactly what we needed.",
-    author: "Robert Chen",
-    role: "Engineering Manager",
-    company: "InnovateLabs",
-    rating: 5
+    content: "Развернули on-premise-инфраструктуру и объединили 5 школ под одним API. Enterprise-решение, которое работает.",
+    author: "EduCorp",
+    role: "Продюсерская команда",
+    highlight: "5 школ в одной системе"
   }
 ];
 
@@ -33,16 +30,12 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent text-sm font-medium mb-4">
-            Testimonials
+            Истории роста
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Loved by
-            <span className="text-accent"> 50,000+ </span>
-            Learners
+            Реальные результаты
+            <span className="text-accent"> наших пользователей</span>
           </h2>
-          <p className="text-lg text-primary-foreground/70">
-            See what our students and organizations have to say about their learning experience.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -53,11 +46,9 @@ const Testimonials = () => {
             >
               <Quote className="w-10 h-10 text-accent mb-4 opacity-50" />
               
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-accent fill-accent" />
-                ))}
+              {/* Highlight Badge */}
+              <div className="inline-block px-3 py-1 rounded-full bg-accent/20 text-accent text-xs font-medium mb-4">
+                {testimonial.highlight}
               </div>
 
               <p className="text-primary-foreground/90 mb-6 leading-relaxed">
@@ -73,7 +64,7 @@ const Testimonials = () => {
                 <div>
                   <p className="font-semibold text-primary-foreground">{testimonial.author}</p>
                   <p className="text-sm text-primary-foreground/60">
-                    {testimonial.role} at {testimonial.company}
+                    {testimonial.role}
                   </p>
                 </div>
               </div>
